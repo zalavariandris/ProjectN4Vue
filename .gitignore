@@ -1,0 +1,19 @@
+# ignore folders
+Ikon/tmp/
+Ikon/archive/
+__pycache__/
+node_modules/
+
+# Python stuff
+# Byte-compiled / optimized / DLL files
+
+*.py[cod]
+*$py.class
+
+
+.*
+!.gitignore
+
+*.pyc
+
+*.png

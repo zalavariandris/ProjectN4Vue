@@ -1,0 +1,234 @@
+body {
+  background-color: #f1f1f1;
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  margin: 6em;
+}
+
+h3{
+	margin: 1em;
+	font-weight: inherit;
+}
+
+/*** Table Styles **/
+table{
+	border-collapse: collapse;
+	padding: 1px;
+	background: white;
+	width: 100%;
+	table-layout: fixed;
+}
+thead {
+  color:white;
+  background:#1b1e24;
+  font-weight: 100;
+  text-align:left;
+  vertical-align:middle;
+}
+
+tbody tr:hover{
+	background: orange;
+}
+tbody{
+	line-height: 1em;
+}
+tr{
+	line-height: 1em;
+	/*max-height: 1em;*/
+}
+   
+td {
+	padding: 1em;
+	text-align:left;
+	vertical-align:middle;
+	font-weight:300;
+	overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*** Table Styles **/
+input{
+	padding: 1em;
+	border: none;
+}
+
+input:focus{
+	outline: none;
+}
+
+#status-box{
+	float: right;
+	font-style: italic;
+}
+
+/**/
+.warning{
+	color: darkorange;
+}
+
+main{
+	display: flex;
+	justify-content: center;
+}
+
+main>*{
+	margin: 0 1em;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 50%;
+}
+
+.label{
+	display: inline-block;
+    margin: 0.25em;
+    margin-right: 1em;
+    padding: 0.25em 0.5em;
+    border-bottom: 1px black solid;
+    min-height: 1em;
+}
+.label:hover{
+	background: darkorange;
+	cursor: pointer;
+}
+
+textarea{
+	display: block;
+	width: 100%;
+	height: 6em;
+}
+
+
+textarea.code.valid{
+	border: none;
+	outline: none;
+}
+
+textarea.code{
+	outline: red solid 3px;
+}
+textarea.code:focus{
+	outline: none;
+}
+
+
+.ikon-source{
+
+}
+
+.ikon-source .row{
+	display: flex;
+}
+.ikon-source .row>*{
+	margin-right: 1em;
+}
+
+.ikon-source .title{
+	display: inline-block;
+	font-style: italic;
+	margin-bottom: 0.5em;
+}
+
+.ikon-source .artists{
+	display: inline-block;
+	margin-bottom: 0.5em;
+}
+
+.ikon-source .gallery{
+	display: inline-block;;
+	font-weight: bold;
+}
+
+.ikon-source .sep{
+	display: none;
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+svg{
+	background: white;
+}
+circle{
+	stroke: white;
+	stroke-width: 2px;
+}
+
+#TheQuery{
+    display: flex;
+}
+
+#TheQuery>section{
+    padding: 1em;
+    flex-basis: 0; /* equal width columns */
+    flex-grow: 1;
+}
+
+.card{
+	background: white;
+	padding: 1em;
+}	
+
+.paginate{
+	text-align: center;
+}
+.paginate button{
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+.paginate button:hover{
+	text-decoration: underline;
+}
+.paginate button:focus{
+	outline: none;
+}
+
+
+nav{
+	background: white;
+	padding: 1em;
+}
+
+h1{
+	background-color: white;
+}
+
+.status{
+	background-color: white;
+	padding: 1em;
+/*    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 1em;*/
+}
+
+/* Autocomplete */
+.autocomplete{
+	display: inline-block;
+}
+.autocomplete input{
+	padding: 0;
+}
+.autocomplete ul{
+	display: none;
+	position: absolute;
+    background: white;
+    box-shadow: 1px 1px 3px #0000002e;
+    padding: 0.5em;
+    list-style: none;
+    margin: 0;
+}
+
+.autocomplete:focus-within ul{
+	display: block;
+}
+
+.card section{
+	margin: 1em;
+}

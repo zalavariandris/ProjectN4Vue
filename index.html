@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>QueryDB</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="/vendor/vue.js"></script>
+        <script src="/vendor/vue-router.js"></script>
+        <script src="/vendor/vuex.js"></script>
+        <script src="/vendor/sql-wasm.js"></script>
+        <script src="/vendor/three.js"></script>
+        <script src="/vendor/TrackballControls.js"></script>
+        <script src="/vendor/d3.js"></script>
+        <script src="/vendor/jsnetworkx.js"></script>
+        <script type="module" src="/src/app.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <h1>Database</h1>
+            <nav>
+                <router-link to="/overview">overview</router-link>
+                <router-link to="/artists">artists</router-link>
+                <router-link to="/exhibitions">exhibitions</router-link>
+                <router-link to="/galleries">galleries</router-link>
+                <router-link to="/littlegraph">littlegraph</router-link>
+                <router-link to="/graphview">graphview</router-link>
+            </nav>
+            <div v-if="$store.state.loading" class="status">
+                <section>loading...
+                    <progress :value='$store.state.loadingProgress' max="100"></progress>
+                </section>
+            </div>
+
+            <router-view></router-view>
+        </div>
+    </body>
+</html>
