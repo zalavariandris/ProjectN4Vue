@@ -23,7 +23,7 @@ const store = new Vuex.Store({
         fetch (state) {
             console.log('loading...');
             state.loading = true;
-            initSqlJs({locateFile: filename => `/vendor/${filename}`}).then((SQL)=>{
+            initSqlJs({locateFile: filename => `./vendor/${filename}`}).then((SQL)=>{
               loadDatabase(SQL, "./resources/ikon.db", (progress)=>{
                 state.loadingProgress = progress*100;
                 console.log(state.loadingProgress);
